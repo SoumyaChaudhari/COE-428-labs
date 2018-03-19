@@ -11,6 +11,7 @@ int main(int argc, char * argv[])
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
       continue;
     if(ch=='<'){
+       printf("hello world");
         push(ch);
     }
 
