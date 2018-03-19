@@ -10,10 +10,10 @@ int main(int argc, char * argv[])
   while ((ch = getchar()) != EOF) {
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
       continue;
-    //
-    
-    
-    
+    if(ch=='<'){
+        push(ch);
+    }
+
   }
   exit(0);
 }
