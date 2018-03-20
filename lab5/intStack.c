@@ -76,9 +76,9 @@ void push(int thing2push)
  */
 int isEmpty()
 {
-    if(top ==0){
+    if(top ==0){ //if stack is empty
         return 1;
     }
-  else
+  else //if stack is not empty
      return 0;
 }
