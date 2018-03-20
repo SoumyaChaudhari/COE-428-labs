@@ -3,6 +3,7 @@
 #include <ctype.h>
 extern int pop();
 extern void push(int);
+extern int isEmpty();
 
 int main(int argc, char * argv[])
 {
@@ -19,11 +20,11 @@ int main(int argc, char * argv[])
             ch = getchar();
             poppedch = pop();
             //Let's check if the stack is empty.
-            if(isEmpty() == 1)
+            if((isEmpty()) == 1)
                exit;
             elseif(poppedch != ch ){
                 printf("Invalid!\n");
-                exit;
+                exit(1);
             }
         }
     }
