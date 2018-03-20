@@ -22,7 +22,7 @@ int main(int argc, char * argv[])
             if(isEmpty() == 1)
                exit;
             elseif(poppedch != ch ){
-                printf("Invalid!\n", );
+                printf("Invalid!\n");
                 exit;
             }
         }
@@ -30,9 +30,9 @@ int main(int argc, char * argv[])
 
   }
   if(isEmpty()== 0){
-    fprintf(stderr,"Invalid!\n", );
+    fprintf(stderr,"Invalid!\n");
     exit(1);}
   else{
-    fprintf(stderr,"Valid!\n", );
+    fprintf(stderr,"Valid!\n");
     exit(0);}
 }
