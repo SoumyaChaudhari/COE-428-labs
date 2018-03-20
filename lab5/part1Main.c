@@ -9,20 +9,21 @@ int main(int argc, char * argv[])
 {
   int ch, poppedch; // ch is from stdin and poppedch is the c
   while ((ch = getchar()) != EOF) {
-    if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
+    if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/')) //????
       continue;
     if(ch=='<'){
-        ch = getchar();
-        if(isalpha(ch)){
+        ch = getchar(); //Take another stdin
+        if(isalpha(ch)){ // If ch is an alphabet then push it onto the stack
             push(ch);
         }
-        else if(ch=='/'){
+        else if(ch =='/'){
             ch = getchar();
             poppedch = pop();
             //Let's check if the stack is empty.
             if((isEmpty()) == 1)
-               exit;
-            elseif(poppedch != ch ){
+               exit(0);
+            else if(poppedch != ch )
+            {
                 printf("Invalid!\n");
                 exit(1);
             }
