@@ -7,7 +7,7 @@ extern int isEmpty();
 
 int main(int argc, char * argv[])
 {
-  int ch, poppedch; // ch is the stdin and poppedch is the c
+  int ch, poppedch; // ch is from stdin and poppedch is the c
   while ((ch = getchar()) != EOF) {
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/'))
       continue;
