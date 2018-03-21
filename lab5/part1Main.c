@@ -18,14 +18,19 @@ int main(int argc, char * argv[])
         }
         else if(ch =='/'){
             ch = getchar();
-            poppedch = pop();
             //Let's check if the stack is empty.
-            if((isEmpty()) == 1)
+            if((isEmpty()) == 1) //if the stack is empty then you can't pop
                exit(0);
-            else if(poppedch != ch )
+            else //if the stack isn't empty then you can pop
             {
-                printf("Invalid!\n");
-                exit(1);
+                poppedch = pop();
+                if(poppedch != ch ){
+                   printf("Invalid!\n");
+                   exit(1);
+                 }
+                 else{
+                     printf("Valid!\n");
+                 }
             }
         }
     }
