@@ -1,12 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <inStack.c>
+
 extern int pop();
 extern void push(int);
 extern int isEmpty();
 
-int main(int argc, char * argv[])
+void Print(){
+    int i;
+    printf("Stack: ", );
+    for(i =0; i <= top; i++)
+      printf("%d",stack[i]);
+    printf("\n")
+}
+//int argc, char * argv[]
+int main()
 {
+    int stack[5];
+    /*
   int ch, poppedch; // ch is from stdin and poppedch is the c
   while ((ch = getchar()) != EOF) {
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/')) //????
@@ -42,4 +54,10 @@ int main(int argc, char * argv[])
   else{
     fprintf(stderr,"Valid!\n");
     exit(0);}
+    **/
+    Push(2); Print();
+    Push(5); Print();
+    Push(10); Print();
+    Pop(); Print();
+    Push(12); Print();
 }

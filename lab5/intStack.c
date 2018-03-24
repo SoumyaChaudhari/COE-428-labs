@@ -1,3 +1,4 @@
+
 /**
  *  The functions in this module implement a Stack data structure
  *  of integers.  (Note that chars are also integers so this
@@ -37,19 +38,19 @@ static int stack[100];
  * is printed to stderr and the value -1 (minus one) is returned.
  */
 
-int pop()
-{
-    int temp;
-   if(top==0){
-       fprintf(stderr, "Stack is empty. (An Underflow error!)\n", );
-       return -1;
-   }
-   else{
-           temp = stack[top];
-           stack[top] = stack[top-1];
-   }
-     return temp;
-}
+ int pop()
+ {
+     int temp;
+    if(top==0){
+        fprintf(stderr, "Stack is empty. (An Underflow error!)\n");
+        return -1;
+    }
+    else{
+            temp = stack[top-1]; //Temp points to a lower top value.
+            top--; //Decrease top's value by 1
+    }
+      return temp;
+ }
 
 /**
  *  push(thing2push) adds the "thing2push" to the top of the stack.
@@ -57,28 +58,30 @@ int pop()
  *  If there is no more space available on the Stack, an error
  *  message is printed to stderr.
  */
-void push(int thing2push)
-{
-    if(top==100){
-        fprintf(stderr,"Stack is full. (An Overflow error!) \n");
-    }
-    else{
+ void push(int thing2push)
+ {
+     if(top==100){
+         fprintf(stderr,"Stack is full. (An Overflow error!) \n");
+     }
+     else{ //If the stack isn't full then you can push thing2push on it.
+         top = top + 1;
+         stack[top] = thing2push; //Item is pushed onto the stack and then top is incremented.
 
-        stack[top] = thing2push; //Item is pushed onto the stack and then top is incremented.
-        top = top + 1;
-    }
-}
+     }
+ }
+
 
 /**
  * isEmpty() returns a non-zero integer (not necessarily 1) if the
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-int isEmpty()
-{
-    if(top ==0){ //if stack is empty
-        return 1;
-    }
-  else //if stack is not empty
-     return 0;
-}
+
+ int isEmpty()
+ {
+     if(top ==0){ //if stack is empty
+         return 1;
+     }
+   else //if stack is not empty
+      return 0;
+ }
