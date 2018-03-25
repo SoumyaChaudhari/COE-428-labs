@@ -6,21 +6,9 @@ extern int pop();
 extern void push(int);
 extern int isEmpty();
 
-<<<<<<< HEAD
 int main (int argc, char * argv[])
-=======
-void Print(){
-    int i;
-    printf("Stack: " );
-    for(i =0; i <= top; i++)
-      printf("%d",stack[i]);
-    printf("\n");
-}
-//int argc, char * argv[]
-int main()
->>>>>>> e9020cf1f78cabee737f9e2e74aab19a77327845
 {
-  int ch, var,poppedch; // ch is from stdin and poppedch is the c
+  int ch, var,poppedch; // all these variables come from stdin
   while ((ch = getchar()) != EOF) {
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/')) //If not any of those then continue looking in the file
        continue;
@@ -33,7 +21,7 @@ int main()
                           push(ch); //Only push ch onto the stack when you have a complete tag
                 }
                 else{
-                printf("Incomplete tag. Try fixing the error and running again!");
+                printf("Incomplete tag. Try running again!");
                 exit(1);
                 }
         }
@@ -49,7 +37,7 @@ int main()
                               exit(0);
                            }
 
-                           else if((poppedch = pop())== ch ) //if the stack isn't empty then you can pop
+                           else if((poppedch = pop())== ch ) //if the stack isn't empty then you can pop and check poppedch against ch
                            {
                                   continue;
                            }
