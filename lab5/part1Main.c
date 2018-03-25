@@ -9,7 +9,7 @@ extern int isEmpty();
 
 void Print(){
     int i;
-    printf("Stack: ", );
+    printf("Stack: " );
     for(i =0; i <= top; i++)
       printf("%d",stack[i]);
     printf("\n")
