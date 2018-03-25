@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
 /**
  *  The functions in this module implement a Stack data structure
@@ -29,29 +32,23 @@
 //   Uncomment the following 2 lines and use these static globals!
 static int top = 0;
 static int stack[100];
-
-
 /**
  * pop() removes the top integer on the stack and returns it.
  *
  * If pop() is attempted on an empty stack, an error message
  * is printed to stderr and the value -1 (minus one) is returned.
  */
-
  int pop()
  {
-     int temp;
     if(top==0){
         fprintf(stderr, "Stack is empty. (An Underflow error!)\n");
         return -1;
     }
     else{
-            temp = stack[top-1]; //Temp points to a lower top value.
-            top--; //Decrease top's value by 1
+            int temp = stack[--top]; //Temp points to a lower top value.
+            return temp;
     }
-      return temp;
  }
-
 /**
  *  push(thing2push) adds the "thing2push" to the top of the stack.
  *
@@ -60,28 +57,24 @@ static int stack[100];
  */
  void push(int thing2push)
  {
-     if(top==100){
+     if(top > 99){
          fprintf(stderr,"Stack is full. (An Overflow error!) \n");
      }
      else{ //If the stack isn't full then you can push thing2push on it.
-         top = top + 1;
-         stack[top] = thing2push; //Item is pushed onto the stack and then top is incremented.
-
+         stack[top++] = thing2push; //Item is pushed onto the stack and then top is incremented.
      }
  }
-
-
 /**
  * isEmpty() returns a non-zero integer (not necessarily 1) if the
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-
  int isEmpty()
  {
      if(top ==0){ //if stack is empty
          return 1;
      }
-   else //if stack is not empty
+     else { //if stack is not empty
       return 0;
+     }
  }
