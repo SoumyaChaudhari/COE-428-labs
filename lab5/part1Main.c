@@ -12,7 +12,7 @@ void Print(){
     printf("Stack: " );
     for(i =0; i <= top; i++)
       printf("%d",stack[i]);
-    printf("\n")
+    printf("\n");
 }
 //int argc, char * argv[]
 int main()
