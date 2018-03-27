@@ -8,7 +8,7 @@ extern int isEmpty();
 
 int main (int argc, char * argv[])
 {
-  int ch, var,poppedch; // ch is from stdin and poppedch is the c
+  int ch, var,poppedch; // all these variables come from stdin
   while ((ch = getchar()) != EOF) {
     if (!(isalpha(ch) || ch == '>' || ch == '<' || ch == '/')) //If not any of those then continue looking in the file
        continue;
@@ -37,7 +37,7 @@ int main (int argc, char * argv[])
                               exit(0);
                            }
 
-                           else if((poppedch = pop())== ch ) //if the stack isn't empty then you can pop
+                           else if((poppedch = pop())== ch ) //if the stack isn't empty then you can pop and check poppedch against ch
                            {
                                   continue;
                            }
