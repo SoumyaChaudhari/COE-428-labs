@@ -1,33 +1,34 @@
 Summarize your lab:
-
+https://www.sanfoundry.com/c-program-sum-ascii-string/ //Video for sum of all ASCII values
+https://www.youtube.com/watch?v=QZOLb0xHB_Q //Video for balanced parentheses
   Part 1:
      Works  Yes or No
-     
+
   Part 2:
      Works  Yes or No
-     
+
   Part 3:
      Works  Yes or No
-     
+
 ***ANSWERS TO QUESTIONS***
  Question 1:
      Which hash table collision resolution method did you use
      (eg. chaining or open addressing)? Explain your choice
      briefly (less than 25 words).
  YOUR ANSWER:
- 
- 
- 
- 
- 
+
+
+
+
+
  Question 2:
        Which hash function (division or multiplication) did you use?
        How did you convert a string into a number?
  YOUR ANSWER:
 
- 
- 
- 
+
+
+
  Question 3:
        Another legal XML tag not used in this lab is the
        stand-alone tag.  This kind of tag
@@ -35,9 +36,8 @@ Summarize your lab:
        It is identified with a '/' (slash) preceding the
        final >.  (For example, the <foo/>
        is a stand-alone tag that is self balancing.
-       
+
        Describe briefly how
        you would modify Part 3 to allow this kind of tag.
-       
+
  YOUR ANSWER:
-  

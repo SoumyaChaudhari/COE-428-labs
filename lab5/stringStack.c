@@ -1,7 +1,8 @@
+#include <stdio.h>
 /**
  *  The functions in this module implement a Stack data structure
  *  of char pointers (aka "strings").
- *  
+ *
  *  NOTE: the stack is implemented as a fixed size array (size = 100).
  *  Consequently, no more than 100 strings can be pushed onto
  *  the Stack at any given time.
@@ -25,8 +26,8 @@
 //
 //  RECOMMENDATION:
 //   Uncomment the following 2 lines and use these static globals!
-//static int top = 0;
-//static char * stack[100];
+static int top = 0;
+static char * stack[100];
 
 /**
  * pop() removes the top string on the stack and returns it.
@@ -37,7 +38,14 @@
 
 char *  pop()
 {
-  return (char *) 0;  //A dummy return statement
+    if((isEmpty()) == 1 ){
+         fprintf(stderr,"Stack is empty. (An underflow error!) \n");
+          return NULL;
+    }
+    else{
+        char * temp = stack[--top]; //Temp points to a lower top value.
+        return temp;
+   }
 }
 
 /**
@@ -48,6 +56,13 @@ char *  pop()
  */
 void push(char * thing2push)
 {
+    if(top > 99){
+        fprintf(stderr,"Stack is full. (An Overflow error!) \n");
+    }
+    else{ //If the stack isn't full then you can push thing2push on it.
+        stack[top++] = thing2push; //Item is pushed onto the stack and then top is incremented.
+    }
+
 }
 
 /**
@@ -55,7 +70,12 @@ void push(char * thing2push)
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-int isEmpty()
-{
-  return 0;  //A dummy return statement
-}
+ int isEmpty()
+ {
+     if(top ==0){ //if stack is empty
+         return 1;
+     }
+     else { //if stack is not empty
+      return 0;
+     }
+ }

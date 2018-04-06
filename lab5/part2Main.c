@@ -21,7 +21,6 @@ int main (int argc, char * argv[])
                 if((var =='>')&& (var !=EOF)){
                           push(ch); //Only push ch onto the stack when you have a complete tag
                           counterarr[ch - 97]++;
-
                 }
                 else{
                 printf("Incomplete tag. Try running again!");
